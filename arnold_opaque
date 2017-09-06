@@ -1,0 +1,21 @@
+#001first you need to create a list based on a selection of the geometries you want to apply a specific attribute#
+cosas = cmds.ls(selection=True)
+
+#002with this command you can check the geometries are assigned to that list
+print cosas
+
+
+# This command is just to put the list in different order.
+for culero in cosas:
+    print culero
+
+#003 apply this command to run the script, and thats it#
+
+for algo in cosas:
+    cmds.setAttr(algo + ".aiOpaque", 0)
+
+
+#this command is for individual changes based on the print list
+#example
+    
+cmds.setAttr("pCube1.aiOpaque", 1)
